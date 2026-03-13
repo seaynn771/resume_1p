@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<title>個人履歷</title>
+
+/* 個人照片 */
+.profile-img{
+    width:140px;
+    height:140px;
+    border-radius:50%;
+    object-fit:cover;
+    display:block;
+    margin:0 auto 15px auto;
+    border:4px solid white;
+    box-shadow:0 4px 10px rgba(0,0,0,0.15);
+}
+
+<style>
+
+body{
+    font-family:"Microsoft JhengHei", sans-serif;
+    background:#f4f6fb;
+    margin:0;
+}
+
+header{
+    background:linear-gradient(135deg,#6a8dff,#8fb3ff);
+    color:white;
+    text-align:center;
+    padding:40px;
+}
+
+.container{
+    width:80%;
+    max-width:900px;
+    margin:auto;
+    margin-top:30px;
+}
+
+.card{
+    background:white;
+    padding:25px;
+    margin-bottom:20px;
+    border-radius:12px;
+    box-shadow:0 4px 10px rgba(0,0,0,0.08);
+}
+
+h2{
+    border-left:5px solid #6a8dff;
+    padding-left:10px;
+}
+
+/* 興趣標籤 */
+.tags{
+    margin-top:10px;
+}
+
+.tag{
+    display:inline-block;
+    background:#6a8dff;
+    color:white;
+    padding:6px 12px;
+    border-radius:20px;
+    margin:5px;
+}
+
+/* 頁尾 */
+footer{
+    text-align:center;
+    padding:20px;
+    color:#666;
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+
+<img src="photo.jpg" class="profile-img">
+
+<h1>個人履歷</h1>
+<p>亞洲大學學生</p>
+
+</header>
+
+<div class="container">
+
+<div class="card">
+<h2>基本資料</h2>
+<p><b>姓名：</b>林雅萍</p>
+<p><b>學校：</b>亞洲大學</p>
+<p><b>學號：</b>114022006</p>
+</div>
+
+<div class="card">
+<h2>自我介紹</h2>
+<p>
+我目前就讀於亞洲大學，對生活中的各種事物保持好奇心，
+喜歡透過不同的興趣與活動來豐富自己的生活，
+並持續學習新的技能與知識。
+</p>
+</div>
+
+<div class="card">
+<h2>興趣與技能</h2>
+
+<div class="tags">
+<span class="tag">烹飪</span>
+<span class="tag">攝影</span>
+<span class="tag">跳舞</span>
+</div>
+<div class="card">
+<h2>個人經歷</h2>
+<ul>
+<li>2025 高中畢業</li>
+<li>曾參與課堂專題與小組合作，培養團隊合作能力</li>
+<li>平時透過攝影與舞蹈培養創意與表達能力</li>
+</ul>
+</div>
+
+<div class="card">
+<h2>聯絡方式</h2>
+<p>Email：114022006@live.asia.edu.tw</p>
+<p>Phone：123 456 789</p>
+</div>
+
+</div>
+
+<footer>
+<p id="page">Page 1 / 1</p>
+</footer>
+
+<script>
+// 目前只有一頁
+document.getElementById("page").innerText="Page 1 / 1";
+</script>
+
+</body>
+</html>
