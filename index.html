@@ -6,14 +6,13 @@
 <title>履歷表</title>
 
 <style>
-
 body{
     font-family:"Microsoft JhengHei", sans-serif;
     margin:0;
     background:#eef2f3;
 }
 
-/* 整體動畫 */
+/* 整體 */
 .resume{
     width:900px;
     margin:30px auto;
@@ -46,7 +45,18 @@ body{
     border:3px solid white;
 }
 
+.sidebar h2{
+    margin-top:20px;
+    border-bottom:1px solid rgba(255,255,255,0.3);
+    padding-bottom:5px;
+}
+
 /* 技能條 */
+.skill{
+    text-align:left;
+    margin-top:10px;
+}
+
 .skill-bar{
     background:rgba(255,255,255,0.2);
     border-radius:10px;
@@ -71,9 +81,12 @@ body{
     padding:30px;
 }
 
+.job-title{
+    color:#555;
+}
+
 .section{
     margin-bottom:25px;
-    animation:fadeIn 1s ease;
 }
 
 .section h2{
@@ -90,20 +103,17 @@ body{
     background:#4ca1af;
     color:white;
     cursor:pointer;
-    transition:0.3s;
 }
 
 .music-btn:hover{
     background:#2c3e50;
 }
-
 </style>
-
 </head>
 
 <body>
 
-<!-- 🎵 背景音樂 -->
+<!-- 🎵 音樂 -->
 <audio id="bgm" autoplay loop playsinline>
   <source src="bgm.mp3" type="audio/mpeg">
 </audio>
@@ -125,11 +135,10 @@ function fadeIn(audio){
   }, 200);
 }
 
-// 自動播放處理
+// 自動播放
 audio.play().catch(() => {
   audio.muted = true;
   audio.play();
-
   setTimeout(() => {
     audio.muted = false;
     fadeIn(audio);
@@ -152,19 +161,31 @@ function toggleMusic(){
 <div class="sidebar">
 <img src="photo.jpg" class="profile-img">
 
-<h2>林雅萍</h2>
+<h1>林雅萍</h1>
 <p>亞洲大學 學生</p>
+<p>學號：114022006</p>
 
-<h3>技能</h3>
+<h2>聯絡方式</h2>
+<p>Email<br>114022006@live.asia.edu.tw</p>
+<p>Phone<br>123-456-789</p>
 
-<div>Word / PPT</div>
+<h2>專業技能</h2>
+
+<div class="skill">Word / PowerPoint</div>
 <div class="skill-bar"><div class="skill-fill"></div></div>
 
-<div>Canva</div>
+<div class="skill">Canva</div>
 <div class="skill-bar"><div class="skill-fill"></div></div>
 
-<div>HTML / CSS</div>
+<div class="skill">HTML / CSS</div>
 <div class="skill-bar"><div class="skill-fill"></div></div>
+
+<div class="skill">團隊合作與溝通</div>
+<div class="skill-bar"><div class="skill-fill"></div></div>
+
+<h2>加分能力</h2>
+<p>攝影 / 影像美感</p>
+<p>舞蹈（表達與舞台經驗）</p>
 
 <button class="music-btn" onclick="toggleMusic()">播放 / 暫停音樂</button>
 
@@ -174,32 +195,46 @@ function toggleMusic(){
 <div class="content">
 
 <h1>履歷表</h1>
+<p class="job-title">應徵職位：行政助理 / 行銷助理 / 門市人員</p>
 
 <div class="section">
 <h2>自我介紹</h2>
 <p>
 目前就讀於亞洲大學，具備良好的學習態度與責任感，
-能快速適應環境並完成任務。
+做事細心且具備時間管理能力。擅長團隊合作與溝通，
+能快速適應環境並完成交辦事項。
+希望透過實務工作累積經驗，提升自身專業能力。
 </p>
 </div>
 
 <div class="section">
 <h2>學歷</h2>
 <p>亞洲大學（就讀中）</p>
+<p>2025 高中畢業</p>
 </div>
 
 <div class="section">
-<h2>經歷</h2>
+<h2>相關經歷</h2>
 <ul>
-<li>簡報設計</li>
-<li>團隊合作</li>
-<li>Canva設計</li>
+<li>完成課堂專題製作，負責資料整理與簡報設計</li>
+<li>參與多次小組合作，有效分工並準時完成任務</li>
+<li>使用 Canva 製作簡報與視覺內容</li>
+<li>透過攝影與舞蹈培養創意與表達能力</li>
+</ul>
+</div>
+
+<div class="section">
+<h2>工作優勢</h2>
+<ul>
+<li>學習速度快，能快速上手新工作</li>
+<li>配合度高，能接受排班與調整</li>
+<li>具責任感，能準時完成交辦事項</li>
 </ul>
 </div>
 
 <div class="section">
 <h2>音樂來源</h2>
-<p>背景音樂由 Suno AI 生成，僅供學習用途。</p>
+<p>背景音樂由 Suno AI 生成，僅供個人履歷展示與學習用途。</p>
 </div>
 
 </div>
@@ -209,4 +244,5 @@ function toggleMusic(){
 </body>
 </html>
 ```
+
 
